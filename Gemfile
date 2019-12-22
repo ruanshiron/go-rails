@@ -7,6 +7,8 @@ gem 'rails-i18n'
 
 gem 'cloudinary'
 
+gem "cocoon"
+
 gem 'gmaps4rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
