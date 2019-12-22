@@ -7,6 +7,7 @@ gem 'rails-i18n'
 
 gem 'cloudinary'
 
+gem 'gmaps4rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 gem 'bcrypt',                  '3.1.12'
