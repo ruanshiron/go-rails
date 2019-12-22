@@ -1,0 +1,24 @@
+vi:
+  app_name: "Xin Chào"
+  nav:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    users: "Người dùng"
+    account: "Tài khoản"
+    profile: "Trang cá nhân"
+    setting: "Cài đặt"
+    logout: "Đăng xuất"
+    login: "Đăng nhập"
+  footer: 
+    about: "Về chúng tôi"
+    contact: "Liên hệ"
+  home: 
+    view_my_profile: "Xem trang cá nhân"
+    microposts: "Bài viết"
+    following: "Theo dõi"
+    followers: "Người theo dõi"
+    compose_new_post: "Bạn đang nghĩ gì..."
+    post: "Đăng"
+    choose_file: "Chọn tệp"
+    no_file_chosen: "Không tệp nào được chọn"
+    feed: "Danh sách bài viết"
