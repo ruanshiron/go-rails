@@ -13,10 +13,32 @@ class MicropostsController < ApplicationController
     end
   end
 
+  # def create
+  #   @micropost = current_user.microposts.build(micropost_params)
+  #   respond_to do |format|
+  #     if @micropost.save
+  #       flash[:success] = "Micropost created!"
+  #       format.html { redirect_to root_url }
+  #       format.js {}
+  #     else
+  #       @feed_items = []
+  #       render 'static_pages/home'
+  #     end
+  #   end
+  # end
+
+  # def destroy
+  #   @micropost.destroy
+  #   flash[:success] = "Micropost deleted"
+  #   redirect_to request.referrer || root_url
+  # end
   def destroy
     @micropost.destroy
-    flash[:success] = "Micropost deleted"
-    redirect_to request.referrer || root_url
+    respond_to do |format|
+      format.html { redirect_to root_url }
+      format.json { head :no_content }
+      format.js   { render layout: false }
+    end
   end
 
   private
