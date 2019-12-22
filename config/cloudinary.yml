@@ -1,0 +1,19 @@
+
+development:
+  cloud_name: dm6zqd0rj
+  api_key: '975681497542677'
+  api_secret: lbJZxFw-0Prix3A0vbQ2fZt_01s
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dm6zqd0rj
+  api_key: '975681497542677'
+  api_secret: lbJZxFw-0Prix3A0vbQ2fZt_01s
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dm6zqd0rj
+  api_key: '975681497542677'
+  api_secret: lbJZxFw-0Prix3A0vbQ2fZt_01s
+  enhance_image_tag: true
+  static_file_support: false

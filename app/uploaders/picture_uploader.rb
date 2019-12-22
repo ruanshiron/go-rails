@@ -1,17 +1,16 @@
 class PictureUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
-  process resize_to_limit: [400, 400]
 
-  storage :file
+  include Cloudinary::CarrierWave
 
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  process :convert => 'png'
+  process :tags => ['post_picture']
+
+  version :standard do
+    process :resize_to_fill => [100, 150, :north]
   end
 
-  # Add a white list of extensions which are allowed to be uploaded.
-  def extension_whitelist
-    %w(jpg jpeg gif png)
+  version :thumbnail do
+    resize_to_fit(50, 50)
   end
+
 end
