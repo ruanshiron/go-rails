@@ -4,10 +4,16 @@
     <%= f.text_area :content, placeholder: t("home.compose_new_post") %>
   </div>
   <%= f.submit t("home.post"), class: "btn btn-primary" %>
-  <span class="picture">
-    <% f.hidden_field :picture_cache %>
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
+  <div class="field">
+    <div class="col-md-4">
+      <table class="user-photo-form">
+        <%= f.fields_for :pictures do |picture| %>
+          <%= render 'shared/picture_fields', f: picture %>
+        <% end %>
+        <%= link_to_add_association (t "add_a_photo"), f, :pictures, partial: 'shared/picture_fields', class: "btn btn-default" %>
+      </table>
+    </div>
+  </div>
 <% end %>
 
 <script type="text/javascript">
@@ -17,4 +23,5 @@
       alert('Maximum file size is 5MB. Please choose a smaller file.');
     }
   });
+
 </script>
