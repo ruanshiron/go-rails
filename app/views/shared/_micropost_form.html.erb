@@ -3,17 +3,18 @@
   <div class="field">
     <%= f.text_area :content, placeholder: t("home.compose_new_post") %>
   </div>
-  <%= f.submit t("home.post"), class: "btn btn-primary" %>
   <div class="field">
-    <div class="col-md-4">
-      <table class="user-photo-form">
-        <%= f.fields_for :pictures do |picture| %>
-          <%= render 'shared/picture_fields', f: picture %>
-        <% end %>
-        <%= link_to_add_association (t "add_a_photo"), f, :pictures, partial: 'shared/picture_fields', class: "btn btn-default" %>
-      </table>
-    </div>
+    <table class="table table-borderless">
+      <tbody>
+      <%= f.fields_for :pictures do |picture| %>
+        <%= render 'shared/picture_fields', f: picture %>
+      <% end %>
+      </tbody>
+    </table>
+    <%= link_to_add_association (t "add_a_photo"), f, :pictures, partial: 'shared/picture_fields', class: "btn btn-default" %>
   </div>
+
+  <%= f.submit t("home.post"), class: "btn btn-primary" %>
 <% end %>
 
 <script type="text/javascript">
@@ -23,5 +24,7 @@
       alert('Maximum file size is 5MB. Please choose a smaller file.');
     }
   });
+  $('a.add_fields').data('association-insertion-method', 'append')
+  $('a.add_fields').data('association-insertion-node', 'table.table-borderless tbody')
 
 </script>

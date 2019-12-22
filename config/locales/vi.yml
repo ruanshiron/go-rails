@@ -23,3 +23,17 @@ vi:
     no_file_chosen: "Không tệp nào được chọn"
     feed: "Danh sách bài viết"
   add_a_photo: "Thêm Ảnh"
+  micropost:
+    post: "Đăng"
+    ago: "trước."
+  will_paginate:
+    previous_label: "&#8592; Trước"
+    next_label: "Sau &#8594;"
+    page_gap: "&hellip;"
+  all_user: "Tất cả người dùng"
+  delete: "Xoá"
+  edit: 
+    name: "Tên"
+    email: "Email"
+    password: "Mật khẩu"
+    confirmation: "Nhập lại mật khẩu"
