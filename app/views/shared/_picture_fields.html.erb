@@ -1,14 +1,14 @@
 <tr class="nested-fields"> 
-<td>
-  <%= f.file_field :src %>
-  <%= f.hidden_field :src_cache, value: f.object.src_cache %>
-</td>
-<td class="thumb"> 
-  <% if f.object.src.url.present? %>
-    <%= image_tag f.object.src.url %>
-  <% end %>
-</td>
-<td>
-  <%= link_to_remove_association (t "remove"), f %>
-</td>
+  <td>
+    <%= f.file_field :src, class: "file-input" %>
+    <%= f.hidden_field :src_cache, value: f.object.src_cache %>
+  </td>
+  <td class="thumb"> 
+    <% if f.object.src.url.present? %>
+      <%= image_tag f.object.src.url %>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to_remove_association (t "remove"), f %>
+  </td>
 </tr>
