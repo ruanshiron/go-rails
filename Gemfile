@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -19,6 +19,10 @@ gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.5'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook', '5.0.0'
 
 gem 'bootsnap',   '1.4.4', require: false
 
