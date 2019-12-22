@@ -18,4 +18,9 @@ class RelationshipsController < ApplicationController
       format.js
     end
   end
+
+  private
+  def notify
+    Notification.create(event: "New Notification")
+  end
 end
