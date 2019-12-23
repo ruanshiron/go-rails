@@ -9,6 +9,7 @@ vi:
     setting: "Cài đặt"
     logout: "Đăng xuất"
     login: "Đăng nhập"
+    noti: "Thông báo"
   footer: 
     about: "Về chúng tôi"
     contact: "Liên hệ"
