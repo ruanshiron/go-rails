@@ -1,10 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
-  before_action :set_locale
+  before_action :set_locale, :set_noti
   
 
   private
+  def set_noti
+    @notifications = Notification.last(5).reverse
+  end
   def set_locale
     locale = params[:locale].to_s.strip.to_sym
     I18n.locale = I18n.available_locales.include?(locale) ?
