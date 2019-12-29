@@ -52,6 +52,8 @@ en:
     followers: "followers"
     compose_new_post: "Compose new post..."
     post: "Post"
+    posts: "Posts"
+    new_post: "New Post"
     choose_file: "Choose File"
     no_file_chosen: "No File Chosen"
     read_more: "Read more"
