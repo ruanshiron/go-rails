@@ -37,7 +37,7 @@
     <%=t("micropost.post")%> <%= time_ago_in_words(micropost.created_at) %> <%= t("micropost.ago")%>
     <% if current_user?(micropost.user) %>
       <%= link_to t("micropost.delete"), micropost, method: :delete,
-                                       data: { confirm: "You sure?" }, remote: :true, class: "destroy-micropost" %>
+                                       data: { confirm: "You sure?" }, remote: :true, id: "destroy-micropost-".concat(micropost.id.to_s) %>
     <% end %>
   </span>
   </div>

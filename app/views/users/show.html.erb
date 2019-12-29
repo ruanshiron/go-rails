@@ -5,6 +5,7 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <h4><strong id="current-user-posts-count"><%= @user.microposts.count %> </strong><%= t("home.microposts")%></h4>
       </h1>
     </section>
     <section class="stats">
@@ -14,7 +15,6 @@
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
-      <h3><%= t("home.microposts")%> <small id="current-user-posts-count">(<%= @user.microposts.count %>)</small></h3>
       
       <%= render @microposts %>
       <%= will_paginate @microposts %>

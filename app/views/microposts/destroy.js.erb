@@ -1,5 +1,5 @@
-$('.destroy-micropost').bind('ajax:success', function() {
+$('#destroy-micropost-<%= @micropost.id%>').bind('ajax:success', function() {
    $('#micropost-<%= @micropost.id%>').closest('div').fadeOut();
    toastr["success"]("Deleted <%= @micropost.id%>");
-   $('#current-user-posts-count').html('(<%= current_user.microposts.count%>)')
+   $('#current-user-posts-count').html('<%= current_user.microposts.count%> ')
 });
