@@ -5,9 +5,9 @@
 
  - Nguyễn Thế Vinh 
  - Phùng Thế Hùng 
- - Phương Thảo
+ - Bùi Phương Thảo
  - Nguyễn Viết Ngọc Quang
- - Hồng Hạnh
+ - Nguyễn Thị Hồng Hạnh
  - Ninh Mạnh Hùng 
 ### requirement
 
