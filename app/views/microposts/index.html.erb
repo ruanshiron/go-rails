@@ -1,5 +1,38 @@
-<div class="col-md-8">
-    <h1 class="my-4"><%= t("home.search_result")%>
-    </h1>
-    <%= render @microposts %>
+
+<div class="row">
+  <aside class="col-md-4 ">
+    <% if logged_in? %>
+      <div class="card card-body" style="margin-top: 2em;">
+        <section class="user_info ">
+          <%= render 'shared/user_info' %>
+        </section>
+        <hr>
+        <section class="stats">
+          <%= render 'shared/stats' %>
+        </section>
+        <hr>
+        <%= link_to t("home.new_post"), new_micropost_path, class: "btn btn-success btn-block"%>
+      </div>
+
+    <%end%>
+      <div class="card my-4">
+        <div class="card-body">
+          <div class="input-group">
+            <%= form_tag microposts_path, method: :get, class: "input-group" do %>
+              <%= text_field_tag 'term', params[:term], placeholder: "Bài đăng nào bạn muốn tìm", class:"form-control" %>
+              <span class="input-group-btn">
+              <%= button_tag t("home.search"), class: "btn btn-secondary ml-2" %>
+              </span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+  </aside>
+
+  <div class="col-md-8">
+      <h1 class="my-4"><%= t("home.search_result")%>
+      </h1>
+      <%= render @microposts %>
+  </div>
+
 </div>

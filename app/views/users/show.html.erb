@@ -1,17 +1,22 @@
 <% provide(:title, @user.name) %>
 <div class="row">
   <aside class="col-md-4">
-    <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-        <h4><strong id="current-user-posts-count"><%= @user.microposts.count %> </strong><%= t("home.microposts")%></h4>
-      </h1>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-    </section>
+    
+    <div class="card card-body" style="margin-top: 2em;">
+      <section>
+        <h1>
+          <%= gravatar_for @user %>
+          <%= @user.name %>
+          <h4><strong id="current-user-posts-count"><%= @user.microposts.count %> </strong><%= t("home.microposts")%></h4>
+        </h1>
+      </section>
+      <hr>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+    </div>
   </aside>
+
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
