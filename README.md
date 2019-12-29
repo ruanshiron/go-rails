@@ -6,6 +6,7 @@
  - Nguyễn Thế Vinh 
  - Phùng Thế Hùng 
  - Phương Thảo
+ - Nguyễn Viết Ngọc Quang
  - Hồng Hạnh
  - Ninh Mạnh Hùng 
 ### requirement
