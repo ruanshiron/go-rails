@@ -31,6 +31,8 @@
 
 en:
   app_name: "Your Blog"
+  welcome1: "How was your day ? "
+  welcome2: "Let's share with us..."
   nav:
     home: "Home"
     help: "Help"
@@ -81,5 +83,12 @@ en:
     edit_your_profile: "Edit your profile"
     signin_with_facebook: "Sign in with Facebook"
   contact: "Contact"
+  new:
+    signup: "Sign up"
+    name: "Name"
+    email: "Email"
+    password: "Password"
+    passwordconfirm: "Confirmation"
+    createaccount: "Create my account"
   search:
     holder: "Type here"

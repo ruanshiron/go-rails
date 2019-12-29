@@ -35,14 +35,11 @@
   </div>
 <% else %>
   <div class="center jumbotron">
-    <h1>Welcome to our website</h1>
-
-    <h2>
-      Đây là một trang landing page
-    </h2>
+    <h1><%= t("welcome1")%></h1>
+    <h1><%= t("welcome2")%></h1>
     <br/>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to t("nav.signup"), signup_path, class: "btn btn-lg btn-primary" %>
   </div>
 
 <% end %>
