@@ -33,6 +33,7 @@
       <h1 class="my-4"><%= t("home.search_result")%>
       </h1>
       <%= render @microposts %>
+      <%= will_paginate @microposts%>
   </div>
 
 </div>
