@@ -30,7 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app_name: "Hello world"
+  app_name: "Your Blog"
   nav:
     home: "Home"
     help: "Help"
