@@ -1,7 +1,7 @@
 <div class="row justify-content-md-center">
   <div class="col-md-8">
 
-  <%= form_for(@micropost) do |f| %>
+  <%= bootstrap_form_for(@micropost) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
 
     <div class="field">
@@ -10,13 +10,11 @@
     </div>
 
     <div class="field">
-      <table class="table table-borderless">
-        <tbody>
+      <div class="pictures-form">
         <%= f.fields_for :pictures do |picture| %>
           <%= render 'shared/picture_fields', f: picture %>
         <% end %>
-        </tbody>
-      </table>
+      </div>
       <%= link_to_add_association (t "add_a_photo"), f, :pictures, partial: 'shared/picture_fields', class: "btn btn-light btn-block" %>
     </div>
 
@@ -26,6 +24,7 @@
     
     <%= f.submit t("home.post"), class: "btn btn-primary" %>
   <% end %>
+
   </div>
 </div>
 
@@ -38,6 +37,16 @@
     }
   });
   $('a.add_fields').data('association-insertion-method', 'append')
-  $('a.add_fields').data('association-insertion-node', 'table.table-borderless tbody')
+  $('a.add_fields').data('association-insertion-node', 'div.pictures-form')
+
+
+  $('.custom-file-input').bind('change',function(){
+      console.log("choose");
+    
+      //get the file name
+      var fileName = $(this).val();
+      //replace the "Choose a file" label
+      $(this).next('.custom-file-label').html(fileName);
+  })
 
 </script>

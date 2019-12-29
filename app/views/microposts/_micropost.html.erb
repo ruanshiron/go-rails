@@ -29,7 +29,7 @@
 
   <div class="card-body">
     <h2 class="card-title"><%= micropost.title%></h2>
-    <%= link_to t("micropost.read_more"), micropost%>
+    <%= link_to t("home.read_more"), micropost%>
   </div>
   <div class="card-footer text-muted">
     <%= gravatar_for(micropost.user, size: 24)%>

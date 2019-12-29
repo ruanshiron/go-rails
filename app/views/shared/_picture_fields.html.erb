@@ -1,14 +1,21 @@
-<tr class="nested-fields"> 
-  <td>
-    <%= f.file_field :src, class: "file-input" %>
-    <%= f.hidden_field :src_cache, value: f.object.src_cache %>
-  </td>
-  <td class="thumb"> 
-    <% if f.object.src.url.present? %>
-      <%= image_tag f.object.src.url %>
-    <% end %>
-  </td>
-  <td>
-    <%= link_to_remove_association (t "remove"), f, class: "btn btn-danger" %>
-  </td>
-</tr>
+<div class="nested-fields input-group"> 
+    <div class="flex-fill" >
+    <%= f.file_field :src, class: "file-input form-control",  hide_label: true %>
+    <%= f.hidden_field :src_cache, value: f.object.src_cache,  hide_label: true %>
+
+    </div>
+    <span class="input-group-btn">
+      <%= link_to_remove_association (t "remove"), f, class: "btn btn-danger ml-2" %>
+    </span>
+  
+  <script type="text/javascript">
+  $('.custom-file-input').bind('change',function(){
+      console.log("choose");
+    
+      //get the file name
+      var fileName = $(this).val();
+      //replace the "Choose a file" label
+      $(this).next('.custom-file-label').html(fileName);
+  })
+  </script>
+</div>

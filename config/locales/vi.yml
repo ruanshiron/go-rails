@@ -23,6 +23,7 @@ vi:
     choose_file: "Chọn tệp"
     no_file_chosen: "Không tệp nào được chọn"
     feed: "Danh sách bài viết"
+    read_more: "Đọc thêm"
   add_a_photo: "Thêm Ảnh"
   micropost:
     post: "đăng"

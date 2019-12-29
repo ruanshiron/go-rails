@@ -53,6 +53,7 @@ en:
     post: "Post"
     choose_file: "Choose File"
     no_file_chosen: "No File Chosen"
+    read_more: "Read more"
   add_a_photo: "Add Picture"
   micropost:
     post: "post"

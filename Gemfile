@@ -11,6 +11,8 @@ gem "cocoon"
 
 gem 'ckeditor'
 
+gem "bootstrap_form", "~> 4.0"
+
 gem 'toastr-rails'
 
 gem 'gmaps4rails'
