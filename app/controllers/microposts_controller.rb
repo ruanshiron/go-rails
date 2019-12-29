@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy, :new, :index]
+  before_action :logged_in_user, only: [:create, :destroy, :new]
   before_action :correct_user,   only: :destroy
 
   def index
@@ -7,6 +7,11 @@ class MicropostsController < ApplicationController
       @microposts = Micropost.search_by_full_name(params[:term]).with_pg_search_highlight
     else
       @microposts = Micropost.all
+    end
+
+    respond_to do |format| 
+      format.html {}
+      format.json { render :json => @microposts.limit(5)}
     end
   end
 

@@ -19,6 +19,8 @@
 //= require popper
 //= require cocoon
 //= require toastr
+//= require jquery.easy-autocomplete
+//= require autocomplete
 //= require_tree .
 
 toastr.options = {
