@@ -4,7 +4,7 @@ class MicropostsController < ApplicationController
 
   def index
     if params[:term]
-      @microposts = Micropost.search_by_full_name(params[:term]).with_pg_search_highlight
+      @microposts = Micropost.search_by_full_name(params[:term]).paginate(page: params[:page]).with_pg_search_highlight
     else
       @microposts = Micropost.all
     end

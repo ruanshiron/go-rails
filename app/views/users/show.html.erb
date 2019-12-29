@@ -43,7 +43,7 @@
     <% if @user.microposts.any? %>
       
       <%= render @microposts %>
-      <%= will_paginate @microposts %>
+      <%= will_paginate @microposts, class: "digg_pagination" %>
     <% end %>
   </div>
 </div>

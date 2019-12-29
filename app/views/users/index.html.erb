@@ -4,13 +4,13 @@
   <div class="col-md-8">
     <h1><%= t("all_user")%></h1>
 
-    <%= will_paginate %>
+    <%= will_paginate @users, class: "digg_pagination" %>
 
     <ul class="users">
       <%= render @users %>
     </ul>
 
-    <%= will_paginate %>
+    <%= will_paginate @users, class: "digg_pagination" %>
 
   </div>
 </div>

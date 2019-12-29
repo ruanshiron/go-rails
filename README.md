@@ -1,43 +1,67 @@
-## Nguyễn Thế Vinh - 200167446 - HEDSPI - HUST
+# Go Rails
 
-# Ruby on Rails Tutorial sample application
+## ruby on rails - HUST - Hệ thống thông tin trên web
+### created by
 
-This is the sample application for
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](https://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
+ - Nguyễn Thế Vinh 
+ - Phùng Thế Hùng 
+ - Phương Thảo
+ - Nguyễn Viết Ngọc Quang
+ - Hồng Hạnh
+ - Ninh Mạnh Hùng 
+### requirement
 
-## License
+>  - [x] Cloud Storage `Cloudinary - Carrierwave`
+>  - [x] Ajax `Micropost/delte - Relationship - Autocomplete`
+>  - [x] Autocomplete `Search - easyAutocomplete`
+>  - [x] Dynamic form & Nested Attribute `Miropost.pictures - Cocoon`
+>  - [x] SNS Login `Facebook Login`
+>  - [x] i18n `en/vi`
+>  - [x] Mail `Account Activation Mail - Gmail`
+>  - [x] Websocket `Followed Notifications`
+>  - [x] Google Map `StaticPages/Contact`
+>  - [x] CKeditor `Micropost/new`
+>  - [ ] ReactJS/Angular/Vue
 
-All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
-is available jointly under the MIT License and the Beerware License. See
-[LICENSE.md](LICENSE.md) for details.
-
-## Getting started
-
+### Usage
 To get started with the app, clone the repo and then install the needed gems:
 
+  
+
 ```
+
 $ bundle install --without production
+
 ```
+
+  
 
 Next, migrate the database:
 
+  
+
 ```
+
 $ rails db:migrate
-```
-
-Finally, run the test suite to verify that everything is working correctly:
 
 ```
-$ rails test
+
+  
+Seed some stuff
 ```
+
+$ rails db:seed
+
+```
+
+  
 
 If the test suite passes, you'll be ready to run the app in a local server:
 
-```
-$ rails server
+  
+
 ```
 
-For more information, see the
-[*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
+$ rails server
+
+```
