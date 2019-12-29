@@ -41,6 +41,7 @@ en:
     logout: "Logout"
     login: "Login"
     noti: "Notifications"
+    signup: "Sign up now!"
   footer: 
     about: "About"
     contact: "Contact"
@@ -69,5 +70,10 @@ en:
     name: "Name"
     email: "Email"
     password: "Password"
+    forgot_password: "(Forgot password)"
+    remember_me: "Remember me on this computer"
+    new_user: "New user? "
     confirmation: "Confirmation"
     edit_your_profile: "Edit your profile"
+    signin_with_facebook: "Sign in with Facebook"
+  contact: "Contact"

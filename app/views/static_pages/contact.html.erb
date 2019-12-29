@@ -4,11 +4,7 @@
 <div class="row justify-content-md-center">
   <div class="col-md-8">
     <% provide(:title, "Contact") %>
-    <h1>Contact</h1>
-    <p>
-      Contact the Ruby on Rails Tutorial about the sample app at the
-      <a href="https://www.railstutorial.org/contact">contact page</a>.
-    </p>
+    <h1><%= t :contact %></h1>
     <div style='width: 800px;'>  
       <div id="map" style='width: 800px; height: 400px;'></div>  
     </div>  
@@ -20,8 +16,8 @@
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){  
     markers = handler.addMarkers([  
       {  
-        "lat": 37.3333945,  
-        "lng": -121.8806499,  
+        "lat": 21.028511,  
+        "lng": 105.804817,  
         "picture": {  
           "width":  32,  
           "height": 32  
