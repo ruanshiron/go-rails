@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get 'notifications/index'
   resources :routers
   get 'password_resets/new'

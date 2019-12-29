@@ -1,10 +1,16 @@
 <% provide(:title, 'All users') %>
-<h1><%= t("all_user")%></h1>
 
-<%= will_paginate %>
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+    <h1><%= t("all_user")%></h1>
 
-<ul class="users">
-  <%= render @users %>
-</ul>
+    <%= will_paginate %>
 
-<%= will_paginate %>
+    <ul class="users">
+      <%= render @users %>
+    </ul>
+
+    <%= will_paginate %>
+
+  </div>
+</div>

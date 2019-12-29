@@ -9,6 +9,8 @@ gem 'cloudinary'
 
 gem "cocoon"
 
+gem 'ckeditor'
+
 gem 'toastr-rails'
 
 gem 'gmaps4rails'

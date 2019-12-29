@@ -4,6 +4,7 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= render 'layouts/rails_default' %>
     <%= render 'layouts/shim' %>
+    <%= javascript_include_tag Ckeditor.cdn_url%>
     <% if current_page?(contact_path) %>
       <%= render 'layouts/google_map'%>
     <% end %>

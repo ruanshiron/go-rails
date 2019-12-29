@@ -5,7 +5,7 @@
     <%= render 'shared/error_messages', object: f.object %>
 
     <div class="field">
-      <label for="title">Title</label>
+      <br/>
       <%= f.text_field :title, placeholder: :title, class: "form-control form-control-lg" %>
     </div>
 
@@ -21,7 +21,7 @@
     </div>
 
     <div class="field">
-      <%= f.text_area :content, placeholder: t("home.compose_new_post"), rows: 10, class: "form-control" %>
+      <%= f.cktext_area :content, placeholder: t("home.compose_new_post"), rows: 10, class: "form-control" %>
     </div>
     
     <%= f.submit t("home.post"), class: "btn btn-primary" %>
