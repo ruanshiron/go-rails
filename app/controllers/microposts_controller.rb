@@ -1,6 +1,14 @@
 class MicropostsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy, :new]
+  before_action :logged_in_user, only: [:create, :destroy, :new, :index]
   before_action :correct_user,   only: :destroy
+
+  def index
+    if params[:term]
+      @microposts = Micropost.search_by_full_name(params[:term]).with_pg_search_highlight
+    else
+      @microposts = Micropost.all
+    end
+  end
 
   def new 
     @micropost = current_user.microposts.build

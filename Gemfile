@@ -15,6 +15,9 @@ gem "bootstrap_form", "~> 4.0"
 
 gem 'toastr-rails'
 
+gem 'pg_search'
+gem 'pg', '0.20.0'
+
 gem 'gmaps4rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

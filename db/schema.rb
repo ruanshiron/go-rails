@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_12_29_110133) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_12_29_110133) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "microposts", force: :cascade do |t|
+  create_table "microposts", id: :serial, force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -40,14 +43,14 @@ ActiveRecord::Schema.define(version: 2019_12_29_110133) do
 
   create_table "pictures", force: :cascade do |t|
     t.string "src"
-    t.integer "micropost_id"
+    t.bigint "micropost_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["micropost_id", "created_at"], name: "index_pictures_on_micropost_id_and_created_at"
     t.index ["micropost_id"], name: "index_pictures_on_micropost_id"
   end
 
-  create_table "relationships", force: :cascade do |t|
+  create_table "relationships", id: :serial, force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followed_id"
     t.datetime "created_at", null: false
@@ -83,4 +86,6 @@ ActiveRecord::Schema.define(version: 2019_12_29_110133) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "microposts", "users"
+  add_foreign_key "pictures", "microposts"
 end
