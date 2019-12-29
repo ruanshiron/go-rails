@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
-    @notifications = Notification.all.reverse
   end
 
   def show
