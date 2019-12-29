@@ -51,4 +51,5 @@ vi:
     edit_your_profile: "Sửa thông tin cá nhân"
     signin_with_facebook: "Đăng nhập bằng Facebook"
   contact: "Liên hệ"
-  
+  search:
+    holder: "Gõ vào đây"

@@ -19,7 +19,7 @@
         <div class="card-body">
           <div class="input-group">
             <%= form_tag microposts_path, method: :get, class: "input-group" do %>
-              <%= text_field_tag 'term', params[:term], placeholder: "Bài đăng nào bạn muốn tìm", class:"form-control" %>
+              <%= text_field_tag 'term', params[:term], placeholder: t("search.holder"), class:"form-control" %>
               <span class="input-group-btn">
               <%= button_tag t("home.search"), class: "btn btn-secondary ml-2" %>
               </span>

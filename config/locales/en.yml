@@ -81,3 +81,5 @@ en:
     edit_your_profile: "Edit your profile"
     signin_with_facebook: "Sign in with Facebook"
   contact: "Contact"
+  search:
+    holder: "Type here"
