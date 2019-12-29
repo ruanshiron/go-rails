@@ -24,7 +24,7 @@ class User < ApplicationRecord
     user.name = auth_hash['info']['name']
     user.email = auth_hash['info']['email']
     user.password = Devise.friendly_token[0,20]
-
+    user.activated = true
     user.save!
     user
   end
