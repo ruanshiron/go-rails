@@ -1,17 +1,23 @@
-<li id="micropost-<%= micropost.id %>">
-  <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
-  <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
-  <span class="content">
-    <%= micropost.content %>
-    <% micropost.pictures.each do |picture| %>
-      <%= image_tag picture.src.url if picture.src? %>
-    <% end %>
-  </span>
-  <span class="timestamp">
+
+
+<div class="card mb-4" id="micropost-<%= micropost.id %>">
+  <% micropost.pictures.each do |picture| %>
+    <%= image_tag((picture.src.url), class: "card-img-top") %>
+  <% end %>
+
+  <div class="card-body">
+    <h2 class="card-title">Post Title</h2>
+    <p class="card-text"><%= micropost.content %></p>
+    <%= link_to t("micropost.read_more"), micropost%>
+  </div>
+  <div class="card-footer text-muted">
+    <%= gravatar_for(micropost.user, size: 24)%>
+    <%= link_to micropost.user.name, micropost.user %>
     <%=t("micropost.post")%> <%= time_ago_in_words(micropost.created_at) %> <%= t("micropost.ago")%>
     <% if current_user?(micropost.user) %>
-      <%= link_to "delete", micropost, method: :delete,
+      <%= link_to t("micropost.delete"), micropost, method: :delete,
                                        data: { confirm: "You sure?" }, remote: :true, class: "destroy-micropost" %>
     <% end %>
   </span>
-</li>
+  </div>
+</div>

@@ -9,6 +9,8 @@ gem 'cloudinary'
 
 gem "cocoon"
 
+gem 'toastr-rails'
+
 gem 'gmaps4rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -18,9 +20,9 @@ gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
-gem 'bootstrap-sass',          '3.4.0'
+gem 'bootstrap', '~> 4.4.1'
 gem 'puma',         '3.9.1'
-gem 'sass-rails',   '5.0.6'
+gem 'sassc-rails'
 gem 'uglifier',     '3.2.0'
 gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.5'

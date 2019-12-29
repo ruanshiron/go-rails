@@ -13,8 +13,28 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
 //= require bootstrap
 //= require cocoon
+//= require bootstrap-sprockets
+//= require toastr
 //= require_tree .
+
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-bottom-left",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}

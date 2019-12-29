@@ -1,21 +1,30 @@
-<%= form_for(@micropost) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: t("home.compose_new_post") %>
-  </div>
-  <div class="field">
-    <table class="table table-borderless">
-      <tbody>
-      <%= f.fields_for :pictures do |picture| %>
-        <%= render 'shared/picture_fields', f: picture %>
-      <% end %>
-      </tbody>
-    </table>
-    <%= link_to_add_association (t "add_a_photo"), f, :pictures, partial: 'shared/picture_fields', class: "btn btn-default" %>
-  </div>
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
 
-  <%= f.submit t("home.post"), class: "btn btn-primary" %>
-<% end %>
+  <%= form_for(@micropost) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="field">
+      <table class="table table-borderless">
+        <tbody>
+        <%= f.fields_for :pictures do |picture| %>
+          <%= render 'shared/picture_fields', f: picture %>
+        <% end %>
+        </tbody>
+      </table>
+      <%= link_to_add_association (t "add_a_photo"), f, :pictures, partial: 'shared/picture_fields', class: "btn btn-light btn-block" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_area :content, placeholder: t("home.compose_new_post"), rows: 10, class: "form-control" %>
+    </div>
+    
+
+    <%= f.submit t("home.post"), class: "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>
+
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {

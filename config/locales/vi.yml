@@ -25,8 +25,9 @@ vi:
     feed: "Danh sách bài viết"
   add_a_photo: "Thêm Ảnh"
   micropost:
-    post: "Đăng"
-    ago: "trước."
+    post: "đăng"
+    ago: "trước"
+    delete: "xoá"
   will_paginate:
     previous_label: "&#8592; Trước"
     next_label: "Sau &#8594;"

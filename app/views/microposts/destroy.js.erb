@@ -1,7 +1,5 @@
-
 $('.destroy-micropost').bind('ajax:success', function() {
-   $(this).closest('li').fadeOut();
-   $("body").children(".container").prepend(`<div class="alert alert-danger">Micropost deleted!</div>`);
-   $(".alert-success" ).fadeOut();
-   $(".alert-danger" ).fadeOut(3000);
+   $('#micropost-<%= @micropost.id%>').closest('div').fadeOut();
+   toastr["success"]("Deleted <%= @micropost.id%>");
+   $('#current-user-posts-count').html('(<%= current_user.microposts.count%>)')
 });
