@@ -1,5 +1,7 @@
 vi:
-  app_name: "Xin Chào"
+  app_name: "Your Blog"
+  welcome1: "Ngày hôm nay của bạn thế nào ? "
+  welcome2: "Hãy chia sẻ cùng chúng tôi... "
   nav:
     home: "Trang chủ"
     help: "Trợ giúp"
@@ -51,5 +53,12 @@ vi:
     edit_your_profile: "Sửa thông tin cá nhân"
     signin_with_facebook: "Đăng nhập bằng Facebook"
   contact: "Liên hệ"
+  new:
+    signup: "Đăng ký"
+    name: "Tên đăng nhập"
+    email: "Địa chỉ email"
+    password: "Mật khẩu"
+    passwordconfirm: "Nhập lại mật khẩu"
+    createaccount: "Tạo tài khoản mới"
   search:
     holder: "Gõ vào đây"
